@@ -1,0 +1,12 @@
+.header{
+    background-color: #1E3685;
+    width: 100vw;
+    height: 15vh;
+}
+
+
+.posts{
+    display: flex;
+    justify-content: center;
+    margin-top: 4%;
+}
