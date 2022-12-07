@@ -146,7 +146,6 @@ function ResponciveAppBar() {
 
             <Routes>
                 <Route path="/" element={<Main/>} />
-                <Route path="student" element={<Student/>} />
             </Routes>
 
             </div>

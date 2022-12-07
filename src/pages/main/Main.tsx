@@ -4,6 +4,9 @@ import styles from './Main.module.css';
 import News from "../news/News";
 import AboutShort from "../aboutShort/AboutShort";
 import Advantages from "../advantages/Advantages";
+import {Link, Route, Routes} from 'react-router-dom';
+import Directions from "../directions/Directions";
+import History from "../history/History";
 
 
 const Main = () => {
@@ -15,12 +18,18 @@ const Main = () => {
                 <div className={styles.text_wrapper}>
                     <h2>Факультет подготовки инженерных кадров</h2>
                     <p>Обучение по удобным форматам!</p>
+
+                <Link to="direct">
                     <Button variant="contained">Выбрать направление</Button>
+                </Link>
+
                 </div>
             </div>
 
 
-
+            <Routes>
+                <Route path="direct" element={<Directions/>}></Route>
+            </Routes>
 
         </div>
 
@@ -28,7 +37,14 @@ const Main = () => {
 
     <AboutShort/>
 
+
     <Advantages/>
+
+
+    {/*Перенести в роутер*/}
+    <Directions/>
+
+    <History/>
 
 </div>
     );
