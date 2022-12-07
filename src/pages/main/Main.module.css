@@ -43,7 +43,7 @@
     position: relative;
 }
 
-@media screen and (max-width: 1366px) {
+@media screen and (max-width: 1600px) {
     .text_wrapper h2{
         font-size: 2em;
     }
