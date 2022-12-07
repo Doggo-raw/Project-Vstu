@@ -1,0 +1,21 @@
+.card{
+    /*background-color: rgba(0, 0, 0, 0.5);*/
+    border-radius: 10px;
+    width: 15vw;
+    height: 15vh;
+    position: relative;
+    z-index: 1000;
+}
+
+
+.topNumber{
+    font-size: 1.8em;
+    font-weight: bold;
+    border-bottom: 3px solid white;
+    text-align: center;
+}
+
+.bottomText{
+    font-size: 1.2em;
+    text-align: center;
+}
