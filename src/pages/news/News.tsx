@@ -15,6 +15,12 @@ const News = () => {
                 <MultiActionAreaCard/>
                 <MultiActionAreaCard/>
                 <MultiActionAreaCard/>
+
+
+
+
+
+
             </div>
         </div>
     );
