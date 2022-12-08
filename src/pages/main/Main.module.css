@@ -23,7 +23,7 @@
 
 
 .text_wrapper{
-    width: 30vw;
+    width: 35vw;
     display: flex;
     justify-content: center;
     align-items: start;
@@ -47,7 +47,7 @@
     width: 35vw;
     height: 40vh;
     display: flex;
-    overflow: hidden;
+    /*overflow: hidden;*/
     position: relative;
 }
 
@@ -55,5 +55,17 @@
 @media screen and (max-width: 1600px) {
     .text_wrapper h2{
         font-size: 2em;
+    }
+}
+
+
+@media screen and (max-width: 950px) {
+    .text_wrapper h2{
+        font-size: 2em;
+    }
+
+    .text_plate{
+        font-size: 0.8em;
+        width: 45vw;
     }
 }

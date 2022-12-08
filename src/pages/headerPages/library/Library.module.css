@@ -1,0 +1,57 @@
+.header{
+width: 50vw;
+}
+
+.head_wrapper{
+    background-color: #1E3685;
+    width: 100vw;
+    height: 40vh;
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.about{
+    width: 50vw;
+    font-size: 1.5em;
+}
+
+.about_wrapper{
+    display: flex;
+    justify-content: center;
+    margin: 5% 0;
+}
+
+
+.lineBlock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+.structure{
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.before{
+    width: 50%;
+}
+
+.after{
+    width: 50%;
+}

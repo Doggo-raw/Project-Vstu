@@ -7,6 +7,7 @@ import Advantages from "../advantages/Advantages";
 import {Link, Route, Routes} from 'react-router-dom';
 import Directions from "../directions/Directions";
 import Payment from '../headerPages/services/payment/Payment';
+import Library from "../headerPages/library/Library";
 
 
 
@@ -45,7 +46,8 @@ const Main = () => {
 
     <Advantages/>
 
-    <Payment/>
+
+    <Library/>
 
 </div>
     );
