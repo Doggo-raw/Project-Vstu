@@ -4,9 +4,7 @@ import styles from './Main.module.css';
 import News from "../news/News";
 import AboutShort from "../aboutShort/AboutShort";
 import Advantages from "../advantages/Advantages";
-import {Link, Route, Routes} from 'react-router-dom';
-import Directions from "../directions/Directions";
-import Payment from '../headerPages/services/payment/Payment';
+import {Link} from 'react-router-dom';
 import Library from "../headerPages/library/Library";
 
 
@@ -25,17 +23,9 @@ const Main = () => {
                     <Button variant="contained">Выбрать направление</Button>
                 </Link>
 
-
                 </div>
 
-
             </div>
-
-
-
-            <Routes>
-                <Route path="/direct" element={<Directions/>}></Route>
-            </Routes>
 
         </div>
 

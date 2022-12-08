@@ -3,11 +3,16 @@
     width: 100vw;
     height: 15vh;
 }
-
-
 .posts{
     display: flex;
     justify-content: center;
     margin: 4% 0 4% 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 

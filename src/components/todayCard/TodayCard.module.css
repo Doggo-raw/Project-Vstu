@@ -1,21 +1,41 @@
+.wrapper {
+    display: flex;
+    overflow-y: hidden;
+
+}
+
 .card{
     /*background-color: rgba(0, 0, 0, 0.5);*/
     border-radius: 10px;
-    width: 15vw;
-    height: 15vh;
+    width: 30vw;
+    height: 30vh;
     position: relative;
     z-index: 1000;
+    margin: 5px;
+
 }
 
 
+
 .topNumber{
+
     font-size: 1.8em;
     font-weight: bold;
     border-bottom: 3px solid white;
     text-align: center;
+
 }
 
 .bottomText{
+
     font-size: 1.2em;
     text-align: center;
+}
+@media screen and (max-width: 767px) {
+    .topNumber {
+        font-size: 1.3em;
+    }
+    .bottomText {
+        font-size: 1em;
+    }
 }

@@ -3,8 +3,7 @@ import SplitLine from "../../components/splitLine/SplitLine";
 import {Button} from "@mui/material";
 import styles from './AboutShort.module.css';
 import TodayCard from "../../components/todayCard/TodayCard";
-import {Link, Route, Routes} from 'react-router-dom';
-import History from "../history/History";
+import {Link} from 'react-router-dom';
 
 const AboutShort = () => {
     return (
@@ -29,21 +28,13 @@ const AboutShort = () => {
 
             <h2>ФПИК сегодня - это:</h2>
 
-
                 <div className={styles.cards}>
-
-                    <TodayCard num="14" text="Направлений подготовки бакалавриата и магистратуры"/>
+                    <TodayCard style={{overflow: 'hidden'}} num="14" text="Направлений подготовки бакалавриата и магистратуры"/>
                     <TodayCard num=">2500" text="Студентов обучается"/>
                     <TodayCard num=">25000" text="Выпускников"/>
-
                 </div>
 
-
             </div>
-
-            <Routes>
-                <Route path="/history" element={<History/>}/>
-            </Routes>
 
         </div>
     );

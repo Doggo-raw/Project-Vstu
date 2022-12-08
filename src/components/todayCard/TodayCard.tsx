@@ -6,8 +6,8 @@ const TodayCard = (props: any) => {
         <div className={styles.wrapper}>
 
             <div className={styles.card}>
-                <div className={styles.topNumber}>{props.num}</div>
-                <div className={styles.bottomText}>{props.text}</div>
+                <p className={styles.topNumber}>{props.num}</p>
+                <p className={styles.bottomText}>{props.text}</p>
             </div>
 
 

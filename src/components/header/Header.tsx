@@ -20,8 +20,7 @@ import DropdownLibrary from "./DropdownLibrary";
 import Modal from '../modal/Modal';
 import PaymentIcon from '@mui/icons-material/Payment';
 import Payment from "../../pages/headerPages/services/payment/Payment";
-
-const pages = ['Сервисы', 'Поступающему', 'Студенту', 'Второе высшее', 'Библиотека'];
+import History from "../../pages/history/History";
 
 function ResponsiveAppBar() {
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
@@ -52,13 +51,10 @@ function ResponsiveAppBar() {
                                     color: "inherit",
                                     textDecoration: "none"
                                 }}>
-
                                 {/*LogoDesktop Icon*/}
                                 <Link to="/*">
                                     <div className={styles.logoIco}></div>
                                 </Link>
-
-
                             </Typography>
 
                             {/*Бургер меню*/}
@@ -73,7 +69,6 @@ function ResponsiveAppBar() {
                                 >
                                     <MenuIcon/>
                                 </IconButton>
-
 
                                 <Menu
                                     id="menu-appbar"
@@ -155,6 +150,7 @@ function ResponsiveAppBar() {
                 <Route path="/*" element={<Main/>}/>
                 <Route path={'/direct'} element={<Directions />} />
                 <Route path={'/payment'} element={<Payment />} />
+                <Route path="/history" element={<History/>}/>
             </Routes>
         </nav>
     );
