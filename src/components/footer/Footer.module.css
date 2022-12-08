@@ -1,0 +1,22 @@
+a{
+    color: white;
+    text-decoration: none;
+}
+
+.wrapper{
+    background-color: #1E3685;
+    height: 20vh;
+    width: 100vw;
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    align-items: center;
+}
+
+.program{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+

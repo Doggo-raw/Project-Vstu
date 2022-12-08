@@ -1,0 +1,14 @@
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.wrapper p{
+    font-size: 1.4em;
+    text-align: center;
+    width: 45vw;
+
+}

@@ -3,6 +3,8 @@ import SplitLine from "../../components/splitLine/SplitLine";
 import {Button} from "@mui/material";
 import styles from './AboutShort.module.css';
 import TodayCard from "../../components/todayCard/TodayCard";
+import {Link, Route, Routes} from 'react-router-dom';
+import History from "../history/History";
 
 const AboutShort = () => {
     return (
@@ -17,7 +19,9 @@ const AboutShort = () => {
                     по вечерней и заочной формам обучения.
                 </p>
                 <div>
-                    <Button variant="contained">Подробнее о истории факультета</Button>
+                    <Link to="history">
+                        <Button variant="contained">Подробнее о истории факультета</Button>
+                    </Link>
                 </div>
             </div>
 
@@ -36,6 +40,10 @@ const AboutShort = () => {
 
 
             </div>
+
+            <Routes>
+                <Route path="history" element={<History/>}/>
+            </Routes>
 
         </div>
     );
