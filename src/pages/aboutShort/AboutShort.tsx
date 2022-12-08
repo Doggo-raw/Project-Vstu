@@ -19,7 +19,7 @@ const AboutShort = () => {
                     по вечерней и заочной формам обучения.
                 </p>
                 <div>
-                    <Link to="history">
+                    <Link to="/history">
                         <Button variant="contained">Подробнее о истории факультета</Button>
                     </Link>
                 </div>
@@ -42,7 +42,7 @@ const AboutShort = () => {
             </div>
 
             <Routes>
-                <Route path="history" element={<History/>}/>
+                <Route path="/history" element={<History/>}/>
             </Routes>
 
         </div>

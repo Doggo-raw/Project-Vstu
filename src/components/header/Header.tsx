@@ -52,8 +52,8 @@ function ResponciveAppBar() {
                             <Typography
                                 variant="h6"
                                 noWrap
-                                component="a"
-                                href="/"
+                                // component="a"
+                                // href="/"
                                 sx={{
                                     mr: 2,
                                     display: { xs: "none", md: "flex" },
@@ -64,7 +64,7 @@ function ResponciveAppBar() {
                                     textDecoration: "none"
                                 }}>
 
-                                {/*Logo Icon*/}
+                                {/*LogoDesktop Icon*/}
                                 <Link to="/*">
                                     <div className="logoIco"></div>
                                 </Link>
@@ -114,8 +114,8 @@ function ResponciveAppBar() {
                             <Typography
                                 variant="h5"
                                 noWrap
-                                component="a"
-                                href=""
+                                // component="a"
+                                // href=""
                                 sx={{
                                     mr: 2,
                                     display: { xs: "flex", md: "none" },
@@ -128,7 +128,7 @@ function ResponciveAppBar() {
                                 }}
                             >
 
-                                {/*Logo Icon*/}
+                                {/*LogoMobile Icon*/}
                                 <Link to="/*">
                                     <div className="logoIco"></div>
                                 </Link>
