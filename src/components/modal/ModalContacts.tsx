@@ -50,13 +50,6 @@ export default function NestedModal() {
                         <Chip className={styles.chip} icon={<AccessTime />} label="Вторник, Четверг: 8:30-18:30." variant="outlined" />
                         <Chip className={styles.chip} icon={<AccessTime />} label="Суббота: 10:00-14:00." variant="outlined" />
                         <Chip className={styles.chip} icon={<AccessTime />} label="Воскресенье: выходной." variant="outlined" />
-
-
-
-
-
-
-
                     </p>
                 </Box>
             </Modal>

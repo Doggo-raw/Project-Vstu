@@ -17,7 +17,7 @@ import Abiturient from "./DropdownAbiturien";
 import DropdownStudent from "./DropdownStudent";
 import DropdownHighEducation from "./DropdownHighEducation";
 import DropdownLibrary from "./DropdownLibrary";
-import Modal from '../modal/Modal';
+import Modal from '../modal/ModalContacts';
 import PaymentIcon from '@mui/icons-material/Payment';
 import Payment from "../../pages/headerPages/services/payment/Payment";
 import History from "../../pages/history/History";
