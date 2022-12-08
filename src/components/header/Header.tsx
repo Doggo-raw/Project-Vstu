@@ -37,8 +37,8 @@ function ResponsiveAppBar() {
                             <Typography
                                 variant="h6"
                                 noWrap
-                                component="a"
-                                href="/"
+                                // component="a"
+                                // href="/"
                                 sx={{
                                     mr: 2,
                                     display: {xs: "none", md: "flex"},
@@ -49,7 +49,7 @@ function ResponsiveAppBar() {
                                     textDecoration: "none"
                                 }}>
 
-                                {/*Logo Icon*/}
+                                {/*LogoDesktop Icon*/}
                                 <Link to="/*">
                                     <div className="logoIco"></div>
                                 </Link>
@@ -100,8 +100,8 @@ function ResponsiveAppBar() {
                             <Typography
                                 variant="h5"
                                 noWrap
-                                component="a"
-                                href=""
+                                // component="a"
+                                // href=""
                                 sx={{
                                     mr: 2,
                                     display: {xs: "flex", md: "none"},
@@ -113,6 +113,7 @@ function ResponsiveAppBar() {
                                     textDecoration: "none"
                                 }}
                             >
+
                                 <Link to="/*">
                                     <div className="logoIco"></div>
                                 </Link>

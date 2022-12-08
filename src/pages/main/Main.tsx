@@ -8,6 +8,7 @@ import {Link, Route, Routes} from 'react-router-dom';
 import Directions from "../directions/Directions";
 
 
+
 const Main = () => {
     return (
 <div>
@@ -43,11 +44,7 @@ const Main = () => {
 
     <Advantages/>
 
-
-    {/*Перенести в роутер*/}
-    {/*<Directions/>*/}
-
-    {/*<History/>*/}
+    <Payment/>
 
 </div>
     );
