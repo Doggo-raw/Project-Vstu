@@ -6,7 +6,7 @@ import AboutShort from "../aboutShort/AboutShort";
 import Advantages from "../advantages/Advantages";
 import {Link, Route, Routes} from 'react-router-dom';
 import Directions from "../directions/Directions";
-import Payment from "../headerPages/services/payment/Payment";
+
 
 
 const Main = () => {

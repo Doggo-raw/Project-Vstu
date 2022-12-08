@@ -8,43 +8,28 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import Main from "../../pages/main/Main";
-import {Avatar, IconButton, Tooltip} from "@mui/material";
+import {IconButton} from "@mui/material";
 import {Link, Route, Routes} from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
 import styles from "./Header.module.css";
 import Directions from "../../pages/directions/Directions";
-
-
+import Dropdown from './Dropdown';
 
 const pages = ['Сервисы', 'Поступающему', 'Студенту', 'Второе высшее', 'Библиотека'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-function ResponciveAppBar() {
+function ResponsiveAppBar() {
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
-    const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
 
     const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorElNav(event.currentTarget);
-    };
-    const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-        setAnchorElUser(event.currentTarget);
     };
 
     const handleCloseNavMenu = () => {
         setAnchorElNav(null);
     };
 
-    const handleCloseUserMenu = () => {
-        setAnchorElUser(null);
-    };
-
-
-
-
-
     return (
-        <div>
-
+        <nav>
             <AppBar position="static">
                 <div className={styles.head}>
                     <Container maxWidth="xl">
@@ -56,7 +41,7 @@ function ResponciveAppBar() {
                                 // href="/"
                                 sx={{
                                     mr: 2,
-                                    display: { xs: "none", md: "flex" },
+                                    display: {xs: "none", md: "flex"},
                                     fontFamily: "monospace",
                                     fontWeight: 700,
                                     letterSpacing: ".3rem",
@@ -70,10 +55,10 @@ function ResponciveAppBar() {
                                 </Link>
 
 
-
                             </Typography>
 
-                            <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+                            {/*Бургер меню*/}
+                            <Box sx={{flexGrow: 1, display: {xs: "flex", md: "none"}}}>
                                 <IconButton
                                     size="large"
                                     aria-label="account of current user"
@@ -82,7 +67,7 @@ function ResponciveAppBar() {
                                     onClick={handleOpenNavMenu}
                                     color="inherit"
                                 >
-                                    <MenuIcon />
+                                    <MenuIcon/>
                                 </IconButton>
 
 
@@ -101,7 +86,7 @@ function ResponciveAppBar() {
                                     open={Boolean(anchorElNav)}
                                     onClose={handleCloseNavMenu}
                                     sx={{
-                                        display: { xs: "block", md: "none" }
+                                        display: {xs: "block", md: "none"}
                                     }}
                                 >
                                     {pages.map((page) => (
@@ -111,6 +96,7 @@ function ResponciveAppBar() {
                                     ))}
                                 </Menu>
                             </Box>
+                            {/*Logo Icon*/}
                             <Typography
                                 variant="h5"
                                 noWrap
@@ -118,7 +104,7 @@ function ResponciveAppBar() {
                                 // href=""
                                 sx={{
                                     mr: 2,
-                                    display: { xs: "flex", md: "none" },
+                                    display: {xs: "flex", md: "none"},
                                     flexGrow: 1,
                                     fontFamily: "monospace",
                                     fontWeight: 700,
@@ -128,16 +114,15 @@ function ResponciveAppBar() {
                                 }}
                             >
 
-                                {/*LogoMobile Icon*/}
                                 <Link to="/*">
                                     <div className="logoIco"></div>
                                 </Link>
-
                             </Typography>
 
                             {/*Links*/}
-                            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+                            <Box sx={{flexGrow: 1, display: {xs: "none", md: "flex"}}}>
 
+                                <Dropdown />
                                 <Link to="/direct">
                                     <Button variant="text" sx={{color: "white"}}>{pages[0]}</Button>
                                 </Link>
@@ -177,26 +162,16 @@ function ResponciveAppBar() {
                     </Container>
                 </div>
             </AppBar>
-
             <Routes>
-                <Route path="/*" element={<Main/>} />
-                <Route path="/direct" element={<Directions/>} />
-                <Route path="/direct" element={<Directions/>} />
-                <Route path="/direct" element={<Directions/>} />
-                <Route path="/direct" element={<Directions/>} />
-                <Route path="/direct" element={<Directions/>} />
+                <Route path="/*" element={<Main/>}/>
+                <Route path="/direct" element={<Directions/>}/>
+                <Route path="/direct" element={<Directions/>}/>
+                <Route path="/direct" element={<Directions/>}/>
+                <Route path="/direct" element={<Directions/>}/>
+                <Route path="/direct" element={<Directions/>}/>
             </Routes>
-
-
-
-
-
-
-
-            </div>
-
-
+        </nav>
     );
 }
 
-export default ResponciveAppBar;
+export default ResponsiveAppBar;
