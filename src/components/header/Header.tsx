@@ -13,7 +13,12 @@ import {Link, Route, Routes} from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
 import styles from "./Header.module.css";
 import Directions from "../../pages/directions/Directions";
-import Dropdown from './Dropdown';
+import DropdownServices from './DropdownServices';
+import Abiturient from "./DropdownAbiturien";
+import Student from "../../pages/headerPages/student/Student";
+import DropdownStudent from "./DropdownStudent";
+import DropdownHighEducation from "./DropdownHighEducation";
+import DropdownLibrary from "./DropdownLibrary";
 
 const pages = ['Сервисы', 'Поступающему', 'Студенту', 'Второе высшее', 'Библиотека'];
 
@@ -122,26 +127,11 @@ function ResponsiveAppBar() {
                             {/*Links*/}
                             <Box sx={{flexGrow: 1, display: {xs: "none", md: "flex"}}}>
 
-                                <Dropdown />
-                                <Link to="/direct">
-                                    <Button variant="text" sx={{color: "white"}}>{pages[0]}</Button>
-                                </Link>
-
-                                <Link to="/direct">
-                                    <Button variant="text" sx={{color: "white"}}>{pages[1]}</Button>
-                                </Link>
-
-                                <Link to="/direct">
-                                    <Button variant="text" sx={{color: "white"}}>{pages[2]}</Button>
-                                </Link>
-
-                                <Link to="/direct">
-                                    <Button variant="text" sx={{color: "white"}}>{pages[3]}</Button>
-                                </Link>
-
-                                <Link to="/direct">
-                                    <Button variant="text" sx={{color: "white"}}>{pages[4]}</Button>
-                                </Link>
+                                <DropdownServices />
+                                <Abiturient />
+                                <DropdownStudent />
+                                <DropdownHighEducation />
+                                <DropdownLibrary />
 
 
                                 {/*backup*/}
@@ -164,11 +154,7 @@ function ResponsiveAppBar() {
             </AppBar>
             <Routes>
                 <Route path="/*" element={<Main/>}/>
-                <Route path="/direct" element={<Directions/>}/>
-                <Route path="/direct" element={<Directions/>}/>
-                <Route path="/direct" element={<Directions/>}/>
-                <Route path="/direct" element={<Directions/>}/>
-                <Route path="/direct" element={<Directions/>}/>
+                <Route path={'/direct'} element={<Directions />} />
             </Routes>
         </nav>
     );

@@ -1,0 +1,14 @@
+#basic-button {
+    color: black;
+}
+
+.active {
+    color: #1E3685;
+    padding: 10px;
+    margin-left: 5px;
+}
+
+.not_active {
+    color: black;
+    padding: 5px;
+}

@@ -2,16 +2,14 @@ import * as React from 'react';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
+import styles from './Dropdown.module.css';
 
-export default function Dropdown() {
+export default function DropdownLibrary() {
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
     const open = Boolean(anchorEl);
 
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-        setAnchorEl(event.currentTarget);
-    };
-    const handleHover = (event: React.MouseEvent<HTMLButtonElement>) => {
         setAnchorEl(event.currentTarget);
     };
     const handleClose = () => {
@@ -26,8 +24,9 @@ export default function Dropdown() {
                 aria-haspopup="true"
                 aria-expanded={open ? 'true' : undefined}
                 onClick={handleClick}
+                style={{color: 'white'}}
             >
-                Dashboard
+                Библиотека
             </Button>
             <Menu
                 id="basic-menu"
@@ -39,15 +38,36 @@ export default function Dropdown() {
                 }}
             >
                 <MenuItem onClick={handleClose}>
-                    <Link style={{color: '#1E3685', padding: '5px'}} to={'/'}>Привет я блядский костыль</Link>
+                    <NavLink
+                        className={({ isActive }) =>
+                            isActive ? styles.active : styles.not_active
+                        }
+                        to={'/'}>История
+                    </NavLink>
                 </MenuItem>
                 <MenuItem onClick={handleClose}>
-                    <Link style={{color: '#1E3685', padding: '5px'}} to={'/привет2'}>Привет я блядский костыль</Link>
+                    <NavLink className={({ isActive }) =>
+                        isActive ? styles.active : styles.not_active
+                    }
+                             to={'/'}>Зарегистрироваться
+                    </NavLink>
                 </MenuItem>
                 <MenuItem onClick={handleClose}>
-                    <Link style={{color: '#1E3685', padding: '5px'}} to={'/привет3'}>Привет я блядский костыль</Link>
+                    <NavLink className={({ isActive }) =>
+                        isActive ? styles.active : styles.not_active
+                    }
+                             to={'/direct'}>Как работать с ЭБС
+                    </NavLink>
+                </MenuItem>
+                <MenuItem onClick={handleClose}>
+                    <NavLink className={({ isActive }) =>
+                        isActive ? styles.active : styles.not_active
+                    }
+                             to={'/'}>Партнеры (ЭБС)
+                    </NavLink>
                 </MenuItem>
             </Menu>
+
         </div>
     );
 }
