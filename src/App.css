@@ -8,11 +8,3 @@
 .MuiButton-outlinedSizeLarge {
 }
 
-.logoIco{
-  background-image: url("assets/logo.png");
-  width: 8vw;
-  height: 4vh;
-  background-size: contain;
-  background-repeat: no-repeat;
-
-}

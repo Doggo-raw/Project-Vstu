@@ -31,14 +31,14 @@ export default function NestedModal() {
 
     return (
         <div>
-            <Button style ={{color: 'white', background: 'linear-gradient(to left, #314755, #26a0da', margin: '0 10px'}} onClick={handleOpen}>Связаться</Button>
+            <Button className={styles.modal} style ={{width: '10vw',minWidth: '100px' , color: 'white',background: 'linear-gradient(77deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%)' , margin: '0 10px'}} onClick={handleOpen}>Связаться</Button>
             <Modal
                 open={open}
                 onClose={handleClose}
                 aria-labelledby="parent-modal-title"
                 aria-describedby="parent-modal-description"
             >
-                <Box sx={{ ...style, width: '40vw' }}>
+                <Box className={styles.box} sx={{ ...style, width: '40vw' }}>
                     <h2 id="parent-modal-title" style={{margin: '15px 0'}}>Как можно с нами связаться?</h2>
                     <p id="parent-modal-description">
                         <Chip className={styles.chip} icon={<LocalPhone />} label="+7 8442 74-05-61" variant="outlined" />

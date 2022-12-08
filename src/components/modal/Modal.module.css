@@ -6,3 +6,9 @@
     font-size: 1.5em;
     margin: 10px;
 }
+
+@media screen and (max-width: 767px) {
+    .box {
+        width: 80%;
+    }
+}

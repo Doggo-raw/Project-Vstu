@@ -6,3 +6,24 @@
     align-items: center;
     z-index: 100;
 }
+
+.logoIco{
+    background-image: url("../../assets/logo.png");
+    width: 8vw;
+    height: 4vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 767px) {
+    .logoIco {
+        background-image: url("../../assets/logo.png");
+        width: 100px;
+        height: 50px;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .payment_btn {
+        display: none;
+    }
+}

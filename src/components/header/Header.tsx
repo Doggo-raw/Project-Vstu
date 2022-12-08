@@ -43,8 +43,6 @@ function ResponsiveAppBar() {
                             <Typography
                                 variant="h6"
                                 noWrap
-                                // component="a"
-                                // href="/"
                                 sx={{
                                     mr: 2,
                                     display: {xs: "none", md: "flex"},
@@ -57,7 +55,7 @@ function ResponsiveAppBar() {
 
                                 {/*LogoDesktop Icon*/}
                                 <Link to="/*">
-                                    <div className="logoIco"></div>
+                                    <div className={styles.logoIco}></div>
                                 </Link>
 
 
@@ -95,19 +93,28 @@ function ResponsiveAppBar() {
                                         display: {xs: "block", md: "none"}
                                     }}
                                 >
-                                    {pages.map((page) => (
-                                        <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                            <Typography textAlign="center">{page}</Typography>
-                                        </MenuItem>
-                                    ))}
+                                    {/*бургер меню*/}
+                                    <MenuItem>
+                                        <DropdownServices/>
+                                    </MenuItem>
+                                    <MenuItem>
+                                        <Abiturient />
+                                    </MenuItem>
+                                    <MenuItem>
+                                        <DropdownStudent />
+                                    </MenuItem>
+                                    <MenuItem>
+                                        <DropdownHighEducation />
+                                    </MenuItem>
+                                    <MenuItem>
+                                        <DropdownLibrary />
+                                    </MenuItem>
                                 </Menu>
                             </Box>
                             {/*Logo Icon*/}
                             <Typography
                                 variant="h5"
                                 noWrap
-                                // component="a"
-                                // href=""
                                 sx={{
                                     mr: 2,
                                     display: {xs: "flex", md: "none"},
@@ -120,7 +127,7 @@ function ResponsiveAppBar() {
                                 }}
                             >
                                 <Link to="/*">
-                                    <div className="logoIco"></div>
+                                    <div className={styles.logoIco}></div>
                                 </Link>
                             </Typography>
 
@@ -132,7 +139,8 @@ function ResponsiveAppBar() {
                                 <DropdownHighEducation />
                                 <DropdownLibrary />
                             </Box>
-                                <Button style={{color: 'white', border: '1px solid white'}}
+                                <Button className={styles.payment_btn}
+                                        style={{color: 'white', border: '1px solid white'}}
                                         variant="outlined"
                                         startIcon={<PaymentIcon />}
                                 >
