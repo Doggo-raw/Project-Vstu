@@ -1,0 +1,7 @@
+.stepperWrapper{
+    height: 40vh;
+    width: 85vw;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
