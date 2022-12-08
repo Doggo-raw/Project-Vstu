@@ -1,5 +1,6 @@
 .background {
-    background-image: url("../../assets/f35394ce56197822c82b2233c22fa3f70dafb8d5_1920-_1_.png");
+    background: no-repeat url("../../assets/bg (1).webp");
+    background-size: cover;
     width: 100vw;
     height: 90vh;
     color: white;

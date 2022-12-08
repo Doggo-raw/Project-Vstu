@@ -6,7 +6,6 @@ import AboutShort from "../aboutShort/AboutShort";
 import Advantages from "../advantages/Advantages";
 import {Link, Route, Routes} from 'react-router-dom';
 import Directions from "../directions/Directions";
-import History from "../history/History";
 
 
 const Main = () => {
