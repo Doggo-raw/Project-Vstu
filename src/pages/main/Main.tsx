@@ -19,16 +19,20 @@ const Main = () => {
                     <h2>Факультет подготовки инженерных кадров</h2>
                     <p>Обучение по удобным форматам!</p>
 
-                <Link to="direct">
+                <Link to="/direct">
                     <Button variant="contained">Выбрать направление</Button>
                 </Link>
 
+
                 </div>
+
+
             </div>
 
 
+
             <Routes>
-                <Route path="direct" element={<Directions/>}></Route>
+                <Route path="/direct" element={<Directions/>}></Route>
             </Routes>
 
         </div>
@@ -42,9 +46,9 @@ const Main = () => {
 
 
     {/*Перенести в роутер*/}
-    <Directions/>
+    {/*<Directions/>*/}
 
-    <History/>
+    {/*<History/>*/}
 
 </div>
     );

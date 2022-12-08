@@ -8,11 +8,11 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import Main from "../../pages/main/Main";
-import Student from "../../pages/student/Student";
 import {Avatar, IconButton, Tooltip} from "@mui/material";
 import {Link, Route, Routes} from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
 import styles from "./Header.module.css";
+import Directions from "../../pages/directions/Directions";
 
 
 
@@ -39,6 +39,9 @@ function ResponciveAppBar() {
     };
 
 
+
+
+
     return (
         <div>
 
@@ -62,9 +65,11 @@ function ResponciveAppBar() {
                                 }}>
 
                                 {/*Logo Icon*/}
-                                <Link to="/">
+                                <Link to="/*">
                                     <div className="logoIco"></div>
                                 </Link>
+
+
 
                             </Typography>
 
@@ -79,6 +84,8 @@ function ResponciveAppBar() {
                                 >
                                     <MenuIcon />
                                 </IconButton>
+
+
                                 <Menu
                                     id="menu-appbar"
                                     anchorEl={anchorElNav}
@@ -122,21 +129,48 @@ function ResponciveAppBar() {
                             >
 
                                 {/*Logo Icon*/}
-                                <Link to="/">
+                                <Link to="/*">
                                     <div className="logoIco"></div>
                                 </Link>
 
                             </Typography>
+
+                            {/*Links*/}
                             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-                                {pages.map((page) => (
-                                    <Button
-                                        key={page}
-                                        onClick={handleCloseNavMenu}
-                                        sx={{ my: 2, color: "white", display: "block" }}
-                                    >
-                                        {page}
-                                    </Button>
-                                ))}
+
+                                <Link to="/direct">
+                                    <Button variant="text" sx={{color: "white"}}>{pages[0]}</Button>
+                                </Link>
+
+                                <Link to="/direct">
+                                    <Button variant="text" sx={{color: "white"}}>{pages[1]}</Button>
+                                </Link>
+
+                                <Link to="/direct">
+                                    <Button variant="text" sx={{color: "white"}}>{pages[2]}</Button>
+                                </Link>
+
+                                <Link to="/direct">
+                                    <Button variant="text" sx={{color: "white"}}>{pages[3]}</Button>
+                                </Link>
+
+                                <Link to="/direct">
+                                    <Button variant="text" sx={{color: "white"}}>{pages[4]}</Button>
+                                </Link>
+
+
+                                {/*backup*/}
+
+                                {/*{pages.map((page) => (*/}
+                                {/*        <Button*/}
+                                {/*            key={page}*/}
+                                {/*            onClick={handleCloseNavMenu}*/}
+                                {/*            sx={{ my: 2, color: "white", display: "block" }}*/}
+                                {/*        >*/}
+                                {/*            {page}*/}
+                                {/*        </Button>*/}
+                                {/*))}*/}
+
                             </Box>
 
                         </Toolbar>
@@ -145,10 +179,23 @@ function ResponciveAppBar() {
             </AppBar>
 
             <Routes>
-                <Route path="/" element={<Main/>} />
+                <Route path="/*" element={<Main/>} />
+                <Route path="/direct" element={<Directions/>} />
+                <Route path="/direct" element={<Directions/>} />
+                <Route path="/direct" element={<Directions/>} />
+                <Route path="/direct" element={<Directions/>} />
+                <Route path="/direct" element={<Directions/>} />
             </Routes>
 
+
+
+
+
+
+
             </div>
+
+
     );
 }
 
