@@ -6,6 +6,7 @@ import AboutShort from "../aboutShort/AboutShort";
 import Advantages from "../advantages/Advantages";
 import {Link} from 'react-router-dom';
 import Library from "../headerPages/library/Library";
+import Incoming from "../headerPages/incoming/Incoming";
 
 
 
@@ -37,7 +38,9 @@ const Main = () => {
     <Advantages/>
 
 
-    <Library/>
+    {/*<Library/>*/}
+
+    <Incoming/>
 
 </div>
     );
