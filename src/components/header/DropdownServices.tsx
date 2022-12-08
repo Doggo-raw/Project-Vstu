@@ -42,7 +42,7 @@ export default function DropdownServices() {
                         className={({ isActive }) =>
                             isActive ? styles.active : styles.not_active
                         }
-                        to={'/'}>Оплатить обучение онлайн
+                        to={'/payment'}>Оплатить обучение онлайн
                     </NavLink>
                 </MenuItem>
                 <MenuItem onClick={handleClose}>
