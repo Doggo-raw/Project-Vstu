@@ -134,13 +134,15 @@ function ResponsiveAppBar() {
                                 <DropdownHighEducation />
                                 <DropdownLibrary />
                             </Box>
-                                <Button className={styles.payment_btn}
-                                        style={{color: 'white', border: '1px solid white'}}
+                            <div className={styles.payment_btn}>
+                                <Button style={{color: 'white', border: '1px solid white'}}
                                         variant="outlined"
                                         startIcon={<PaymentIcon />}
                                 >
                                     <NavLink to={'/payment'}>Оплата онлайн</NavLink>
                                 </Button>
+                            </div>
+
                                 <Modal />
                         </Toolbar>
                     </Container>
