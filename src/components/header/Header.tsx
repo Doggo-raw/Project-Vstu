@@ -5,20 +5,21 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Menu from '@mui/material/Menu';
 import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import Main from "../../pages/main/Main";
-import {IconButton} from "@mui/material";
-import {Link, Route, Routes} from "react-router-dom";
+import {Button, IconButton} from "@mui/material";
+import {Link, NavLink, Route, Routes} from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
 import styles from "./Header.module.css";
 import Directions from "../../pages/directions/Directions";
 import DropdownServices from './DropdownServices';
 import Abiturient from "./DropdownAbiturien";
-import Student from "../../pages/headerPages/student/Student";
 import DropdownStudent from "./DropdownStudent";
 import DropdownHighEducation from "./DropdownHighEducation";
 import DropdownLibrary from "./DropdownLibrary";
+import Modal from '../modal/Modal';
+import PaymentIcon from '@mui/icons-material/Payment';
+import Payment from "../../pages/headerPages/services/payment/Payment";
 
 const pages = ['Сервисы', 'Поступающему', 'Студенту', 'Второе высшее', 'Библиотека'];
 
@@ -118,7 +119,6 @@ function ResponsiveAppBar() {
                                     textDecoration: "none"
                                 }}
                             >
-
                                 <Link to="/*">
                                     <div className="logoIco"></div>
                                 </Link>
@@ -126,28 +126,19 @@ function ResponsiveAppBar() {
 
                             {/*Links*/}
                             <Box sx={{flexGrow: 1, display: {xs: "none", md: "flex"}}}>
-
                                 <DropdownServices />
                                 <Abiturient />
                                 <DropdownStudent />
                                 <DropdownHighEducation />
                                 <DropdownLibrary />
-
-
-                                {/*backup*/}
-
-                                {/*{pages.map((page) => (*/}
-                                {/*        <Button*/}
-                                {/*            key={page}*/}
-                                {/*            onClick={handleCloseNavMenu}*/}
-                                {/*            sx={{ my: 2, color: "white", display: "block" }}*/}
-                                {/*        >*/}
-                                {/*            {page}*/}
-                                {/*        </Button>*/}
-                                {/*))}*/}
-
                             </Box>
-
+                                <Button style={{color: 'white', border: '1px solid white'}}
+                                        variant="outlined"
+                                        startIcon={<PaymentIcon />}
+                                >
+                                    <NavLink to={'/payment'}>Оплата онлайн</NavLink>
+                                </Button>
+                                <Modal />
                         </Toolbar>
                     </Container>
                 </div>
@@ -155,6 +146,7 @@ function ResponsiveAppBar() {
             <Routes>
                 <Route path="/*" element={<Main/>}/>
                 <Route path={'/direct'} element={<Directions />} />
+                <Route path={'/payment'} element={<Payment />} />
             </Routes>
         </nav>
     );
