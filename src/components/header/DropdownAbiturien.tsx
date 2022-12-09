@@ -2,8 +2,9 @@ import * as React from 'react';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
-import {NavLink} from "react-router-dom";
+import {NavLink, Route, Routes} from "react-router-dom";
 import styles from './Dropdown.module.css';
+import Incoming from '../../pages/headerPages/incoming/Incoming';
 
 export default function DropdownAbiturien() {
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -17,7 +18,7 @@ export default function DropdownAbiturien() {
     };
 
     return (
-        <div>
+            <div>
             <Button
                 id="basic-button"
                 aria-controls={open ? 'basic-menu' : undefined}
@@ -42,7 +43,7 @@ export default function DropdownAbiturien() {
                         className={({ isActive }) =>
                             isActive ? styles.active : styles.not_active
                         }
-                        to={'/'}>Этапы поступления
+                        to={'/steps'}>Этапы поступления
                     </NavLink>
                 </MenuItem>
                 <MenuItem onClick={handleClose}>
@@ -74,6 +75,8 @@ export default function DropdownAbiturien() {
                 </MenuItem>
             </Menu>
 
+
         </div>
+
     );
 }

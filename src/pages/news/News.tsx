@@ -5,6 +5,8 @@ import SplitLine from "../../components/splitLine/SplitLine";
 import NewsPagination from "../../components/pagination/NewsPagination";
 
 
+
+
 const News = () => {
     return (
         <div className={styles.wrapper}>

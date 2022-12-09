@@ -38,18 +38,25 @@ export default function NestedModal() {
                 aria-labelledby="parent-modal-title"
                 aria-describedby="parent-modal-description"
             >
-                <Box className={styles.box} sx={{ ...style, width: '40vw' }}>
+                <Box className={styles.box}
+                     sx={{ ...style, width: '40vw',
+                         backgroundColor: 'rgba(17, 25, 40, 0.95)',
+                         borderRadius: '12px',
+                         border: '1px solid rgba(255, 255, 255, 0.125)',
+                         color: 'white'}}>
+
+
                     <h2 id="parent-modal-title" style={{margin: '15px 0'}}>Как можно с нами связаться?</h2>
                     <p id="parent-modal-description">
-                        <Chip className={styles.chip} icon={<LocalPhone />} label="+7 8442 74-05-61" variant="outlined" />
-                        <Chip className={styles.chip} icon={<LocalPhone />} label="+7 8442 29-29-34" variant="outlined" />
-                        <Chip className={styles.chip} icon={<Email />} label="tfpic@vstu.ru" variant="outlined" /> <br/>
-                        <Chip className={styles.chip} icon={<House />} label="ул. Дегтярёва, 2." variant="outlined" /> <br/>
+                        <Chip className={styles.chip} icon={<LocalPhone />} label="+7 8442 74-05-61" variant="outlined" sx={ {color: "white", position: 'relative', zIndex: '10'} } />
+                        <Chip className={styles.chip} icon={<LocalPhone />} label="+7 8442 29-29-34" variant="outlined" sx={{color: "white"}}  />
+                        <Chip className={styles.chip} icon={<Email />} label="tfpic@vstu.ru" variant="outlined" sx={{color: "white"}} /> <br/>
+                        <Chip className={styles.chip} icon={<House />} label="ул. Дегтярёва, 2." variant="outlined" sx={{color: "white"}} /> <br/>
                         <p className={styles.work_time}>Время работы:</p> <br/>
-                        <Chip className={styles.chip} icon={<AccessTime />} label="Понедельник, Среда, Пятница.: 8:30-17:00." variant="outlined" /> <br/>
-                        <Chip className={styles.chip} icon={<AccessTime />} label="Вторник, Четверг: 8:30-18:30." variant="outlined" />
-                        <Chip className={styles.chip} icon={<AccessTime />} label="Суббота: 10:00-14:00." variant="outlined" />
-                        <Chip className={styles.chip} icon={<AccessTime />} label="Воскресенье: выходной." variant="outlined" />
+                        <Chip className={styles.chip} icon={<AccessTime />} label="Понедельник, Среда, Пятница.: 8:30-17:00." variant="outlined" sx={{color: "white"}} /> <br/>
+                        <Chip className={styles.chip} icon={<AccessTime />} label="Вторник, Четверг: 8:30-18:30." variant="outlined" sx={{color: "white"}} />
+                        <Chip className={styles.chip} icon={<AccessTime />} label="Суббота: 10:00-14:00." variant="outlined" sx={{color: "white"}} />
+                        <Chip className={styles.chip} icon={<AccessTime />} label="Воскресенье: выходной." variant="outlined" sx={{color: "white"}} />
                     </p>
                 </Box>
             </Modal>

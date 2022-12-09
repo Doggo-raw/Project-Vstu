@@ -2,6 +2,9 @@ import React from 'react';
 import styles from './Footer.module.css';
 import {Link, Route, Routes} from "react-router-dom";
 import '../../App.css';
+import vk from '../../assets/vk-social-network-logo копия.png';
+import tg from '../../assets/telegram.png';
+
 
 const Footer = () => {
     return (
@@ -16,8 +19,12 @@ const Footer = () => {
 
                     {/*переписать на пропсы*/}
                     <div>
-                        <a href="">vk</a>
-                        <a href="">tg</a>
+                        <a href="">
+                            <img className={styles.network} src={vk} alt=""/>
+                        </a>
+                        <a href="">
+                            <img className={styles.network} src={tg} alt=""/>
+                        </a>
                     </div>
                 </div>
 

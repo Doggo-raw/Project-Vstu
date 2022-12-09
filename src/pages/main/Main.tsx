@@ -7,6 +7,7 @@ import Advantages from "../advantages/Advantages";
 import {Link} from 'react-router-dom';
 import Library from "../headerPages/library/Library";
 import Incoming from "../headerPages/incoming/Incoming";
+import Specialists from "../specialists/Specialists";
 
 
 
@@ -30,6 +31,7 @@ const Main = () => {
 
         </div>
 
+
     <News/>
 
     <AboutShort/>
@@ -37,8 +39,7 @@ const Main = () => {
 
     <Advantages/>
 
-
-    {/*<Library/>*/}
+    <Specialists/>
 
     <Incoming/>
 

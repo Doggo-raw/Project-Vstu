@@ -39,16 +39,21 @@
     filter: initial;
 }
 
+
+
 .text_plate{
     margin-left: 10%;
     border-radius: 16px;
     padding: 2%;
-    background-color: rgba(0,0,0,0.6);
     width: 35vw;
     height: 40vh;
     display: flex;
-    /*overflow: hidden;*/
     position: relative;
+
+    backdrop-filter: blur(2px) saturate(0%);
+    -webkit-backdrop-filter: blur(2px) saturate(0%);
+    background-color: rgba(17, 25, 40, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
 
